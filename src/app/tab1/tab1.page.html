@@ -1,0 +1,22 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>
+      Tab 1
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <br>
+  <form [formGroup]="loginForm" (ngSubmit)="gotoSubmit(loginForm.value)">
+    <ion-item>
+      <ion-input type="email" placeholder="Email" formControlName="email"></ion-input>
+    </ion-item><br>
+    <ion-item>
+      <ion-input type="password" placeholder="Password" formControlName="password"></ion-input>
+    </ion-item><br>
+  <ion-button type="submit" expand="block" [disabled]="!loginForm.valid">Log In</ion-button>
+  </form>
+
+
+</ion-content>
